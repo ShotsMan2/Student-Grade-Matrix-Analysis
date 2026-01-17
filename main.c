@@ -4,44 +4,45 @@
 
 int main()
 {
-int m,n,i,j,matris[99][99],sum,ort,ogr;
+    int m, n, i, j, matris[99][99], sum, ort, ogr;
 
-    srand(time(NULL));+
+    srand(time(NULL));
+    +
 
-    printf("n i giriniz ");
-    scanf("%d",&n);
+        printf("n i giriniz ");
+    scanf("%d", &n);
 
     printf("m i giriniz");
-    scanf("%d",&m);
+    scanf("%d", &m);
 
+    for (i = 0; i < n; i++)
+    {
 
-
-    for(i=0;i<n;i++){
-
-        for(j=0;j<m;j++){
-            matris[i][j]=rand()%101;
-
+        for (j = 0; j < m; j++)
+        {
+            matris[i][j] = rand() % 101;
         }
-
     }
 
-    ogr=0;
+    ogr = 0;
 
-    for(i=0;i<n;i++){
-        sum=0;
-        printf("%d. ogrenci: ",i+1);
-        for(j=0;j<m;j++){
-            printf("%d\t",matris[i][j]);
-            sum+=matris[i][j];
+    for (i = 0; i < n; i++)
+    {
+        sum = 0;
+        printf("%d. ogrenci: ", i + 1);
+        for (j = 0; j < m; j++)
+        {
+            printf("%d\t", matris[i][j]);
+            sum += matris[i][j];
         }
-        ort=sum/m;
-        printf("ort: %d",ort);
+        ort = sum / m;
+        printf("ort: %d", ort);
 
-        if(ort>50){
+        if (ort > 50)
+        {
             ogr++;
         }
         printf("\n");
     }
-    printf("\n 50 üstü: %d",ogr);
-
+    printf("\n 50 üstü: %d", ogr);
 }
